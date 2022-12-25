@@ -89,3 +89,25 @@
 // calculator.read(292, 44);
 // console.log(calculator.add());
 // console.log(calculator.mult());
+
+// Вивести послідовнысть чисел Fibonachi
+
+function makeFiboNumbers(number) {
+  const fiboArray = [];
+  let num1 = 0;
+  let num2 = 1;
+  let nextNumSequence = num1 + num2;
+
+  while (nextNumSequence < number) {
+    console.log(nextNumSequence);
+    num1 = num2;
+    num2 = nextNumSequence;
+    nextNumSequence = num1 + num2;
+    fiboArray.push(nextNumSequence);
+  }
+  return fiboArray;
+}
+
+const makeFiboArray = makeFiboNumbers(10000);
+
+console.log(makeFiboArray);
